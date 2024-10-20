@@ -36,7 +36,7 @@ public class MainWindow extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	private final static String IMAGE_FOLDER = "images" + File.separator;
-	private final static int NUMBER_PLAYERS = 2;
+	private final static int NUMBER_PLAYERS = 6;
 	
 	private EquityCalculator equityCalculator;
 	private BackgroundPanel tablePanel;
@@ -91,11 +91,10 @@ public class MainWindow extends JFrame{
 		//Locations minimizado
 		this.playersPanels[0].setLocation(528, 570);
 		this.playersPanels[1].setLocation(115, 470);
-		
-		/*this.playersPanels[2].setLocation(115, 150);
+		this.playersPanels[2].setLocation(115, 150);
 		this.playersPanels[3].setLocation(528, 40);
 		this.playersPanels[4].setLocation(940, 150);
-		this.playersPanels[5].setLocation(940, 470);*/
+		this.playersPanels[5].setLocation(940, 470);
 		
 		this.tablePanel.add(this.boardPanel);
 		this.boardPanel.setSize(350, 130);
@@ -167,7 +166,7 @@ public class MainWindow extends JFrame{
 	}
 	
 	public static void removePlayer(int id) {
-		for(int i = id+1; i <= 1; i++)
+		for(int i = id+1; i <= 5; i++)
 			playersPanels[i].decPlayerID();
 	}
 }
